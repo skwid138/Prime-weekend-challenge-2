@@ -22,6 +22,8 @@ Once on the server, log out the object (req.body):
 
 Then push this new person into an array. the ```GET``` of the "/person" route should return an object that has an array within that has all the people who have been added. 
 
+![client2](client2.png)
+
 This GET call should be called on page load and on "Add Person" click. Once the data is received display each person on the DOM.
 
 ![client1](client1.png)
