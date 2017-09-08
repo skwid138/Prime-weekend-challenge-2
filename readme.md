@@ -31,13 +31,13 @@ This GET call should be called on page load and on "Add Person" click. Once the 
 Hard Mode:
 ---
 
-Create a carousel that shows only one person at a time. There should be "next" and "previous" buttons that wrap (if at first person, hitting previous shoud go to the last) and an indicator of which person is being shown:
+Create a carousel that shows only one person at a time. There should be "next" and "previous" buttons that wrap (if at first person, hitting previous should go to the last) and an indicator of which person is being shown:
 
 ![client3](client3.png)
 
 Pro Mode:
 ---
-Add a "remove" button for each person that removes that person from the array on the server. 
+Add a "remove" button for each person that removes that person from the array on the server. _Hint_: you will probably need `.data()` for this. Also, don't assume that people's names are unique, you may need another unique way to id them.
 
 
 
