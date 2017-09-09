@@ -18,14 +18,16 @@ function addPerson( ) {
     
 
     // variables to collect value of inputs
-    var varName = $().val();
-    var varName2 = $().val();
+    var nameInput = $('#nameInput').val();
+    var factInput = $('#factInput').val();
 
     // object to hold values to send
     var personToSend = {
-        name: varName,
-        fact: varName2
+        name: nameInput,
+        fact: factInput
     };
+    console.log('person to send object ->', personToSend);
+    
 
     $.ajax({
         method: 'POST',
