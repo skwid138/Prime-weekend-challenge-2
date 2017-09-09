@@ -5,16 +5,15 @@ var router = require('express').Router();
 var personArray = [];
 
 // router
-router.get('/', function (reg, res) {
+router.get('/', function (req, res) {
     console.log('in get person route');
-    res.send('person route');
+    res.send(personArray);
 });
 
 router.post('/', function (req, res) {
     console.log('person POST route hit: ', req.body);
     personArray.push(req.body);
     console.log('personArray ->', personArray);
-    
     res.sendStatus(201);
 });
 
