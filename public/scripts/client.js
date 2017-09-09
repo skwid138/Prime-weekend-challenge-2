@@ -17,14 +17,14 @@ function addPerson( ) {
     console.log('in addPerson');
     
 
-    // variables to collect value of inputs
-    var nameInput = $('#nameInput').val();
-    var factInput = $('#factInput').val();
+    // variables for input fields
+    var nameInput = $('#nameInput');
+    var factInput = $('#factInput');
 
-    // object to hold values to send
+    // object to hold values of inputs to POST
     var personToSend = {
-        name: nameInput,
-        fact: factInput
+        name: nameInput.val(),
+        fact: factInput.val()
     };
     console.log('person to send object ->', personToSend);
     
@@ -38,6 +38,8 @@ function addPerson( ) {
 
         }
     });
+    nameInput.val( '' );
+    factInput.val( '' );
 }
 
 
