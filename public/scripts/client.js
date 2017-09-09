@@ -1,18 +1,21 @@
-if (log) console.log('sourced client.js');
 // switches for log statements
 var log = true;
 var noLog = false;
+
+if (log) console.log('sourced client.js');
 
 function onReady( ) {
     if (log) console.log('document ready');
 
     // listener for addPersonButton
-    
+    $('#addPersonButton').on('click', addPerson);
 }
 
 function addPerson( ) {
 // When the "Add Person" button is clicked the user  input should
 // be put into an object and sent to the "/person" route via POST.
+    console.log('in addPerson');
+    
 
     // variables to collect value of inputs
     var varName = $().val();
@@ -29,7 +32,7 @@ function addPerson( ) {
         url: '/person',
         data: personToSend, // object with person data for server
         success: function (response) {
-            console.log('ajax post response ->', response);
+            console.log('person post response ->', response);
 
         }
     });
