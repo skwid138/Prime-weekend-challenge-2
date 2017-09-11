@@ -7,6 +7,9 @@ if (log) console.log('sourced client.js');
 function onReady( ) {
     if (log) console.log('document ready');
 
+    // get people on page load
+    getPeople();
+
     // listener for addPersonButton
     $('#addPersonButton').on('click', addPerson);
 
@@ -54,8 +57,8 @@ function getPeople( ) {
             for (var i = 0; i < response.length; i++) {
                 $div.append('<p>');
                 $div.append(response[i].name + ': ' + response[i].fact);
-                $div.append('<button id="prevButton">Prev</button>'); // buttons for carousel
-                $div.append('<button id="nextButton">Next</button>'); // buttons for carousel
+                // $div.append('<button id="prevButton">Prev</button>'); // buttons for carousel
+                // $div.append('<button id="nextButton">Next</button>'); // buttons for carousel
             }
             $('#peopleSection').append($div);
         }
